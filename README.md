@@ -5,6 +5,7 @@ Hey Rockstar team!
 Inside this repo you will find my completed take-home test with the given specifications.
 
 These Images are available via dockerhub by running: 
+
     docker pull williamrsmith99/custom-postgres &&\
     docker pull williamrsmith99/custom-nginx
 
