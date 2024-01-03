@@ -1,6 +1,6 @@
 # DockerDB_Test
 
-Hey Rockstar team! 
+Hey  team! 
 
 Inside this repo you will find my completed take-home test with the given specifications.
 
