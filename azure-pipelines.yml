@@ -22,12 +22,6 @@ stages:
     steps:
     - script: type $(Build.SourcesDirectory)/DockerfileDB/Dockerfile
       displayName: print dockerfile  
-  - job: Build
-    displayName: Build
-    dependsOn: Test
-    pool:
-      vmImage: ubuntu-latest
-    steps:
     - task: Docker@2
       displayName: Build an image
       inputs:
