@@ -1,18 +1,5 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
-trigger:
-- main
-
-resources:
-- repo: self
-
-variables:
-  tag: '$(Build.BuildId)'
-
 stages:
-- stage: Test
+- stage: Build
   displayName: Build image
   jobs:
   - job: Test
@@ -22,12 +9,10 @@ stages:
     steps:
     - script: type $(Build.SourcesDirectory)/DockerfileDB/Dockerfile
       displayName: print dockerfile  
-- stage: Build
-  displayName: Build image
-  dependsOn: Test
-  jobs:
+
   - job: Build
-    displayName: Building
+    displayName: Build
+    dependsOn: Test
     pool:
       vmImage: ubuntu-latest
     steps:
