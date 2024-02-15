@@ -24,6 +24,7 @@ stages:
       displayName: print dockerfile  
   - job: Build
     displayName: Build
+    dependsOn: Test
     pool:
       vmImage: ubuntu-latest
     steps:
