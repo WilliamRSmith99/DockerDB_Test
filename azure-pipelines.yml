@@ -4,8 +4,6 @@ stages:
   jobs:
   - job: Test
     displayName: Testing
-    pool:
-      vmImage: ubuntu-latest
     steps:
     - script: type $(Build.SourcesDirectory)/DockerfileDB/Dockerfile
       displayName: print dockerfile  
